@@ -1,8 +1,8 @@
 # Identification of residues supporting protein structure in large protein sequence alignments
-#Introduction
+# Introduction
 The aim of the framework is the determination of residues supporting the protein structure in large protein sequence alignments. In this connection, protein structure supporting residues are identified as conserved and correlated protein positions which are crucial for the protein structure. After the determination the residues are used in the process of protein design.
 
-#Requirements
+# Requirements
 The framework has some technical and data requirements, which are listed below: 
 * a recent C\++ compiler that can compile C\++ 14 standard
 * CMake 2.8 or later
@@ -13,7 +13,7 @@ The framework has some technical and data requirements, which are listed below:
 
 Furthermore, the framework can only deal with a MSA of protein sequences in fasta format and a quadratic substitution matrix.
 
-#Installation
+# Installation
 0. Install the necessary requirements.
 1. Clone the repository with `git clone --recursive https://wibi-git.helmholtz-hzi.de/asl20/structure_supporting_residues.git`.
 2. Change into the folder with the cloned repository (`cd structure_supporting_residues`).
@@ -26,7 +26,7 @@ Furthermore, the framework can only deal with a MSA of protein sequences in fast
 9. Compile the C\++ code for the framework with `cmake CMakeLists.txt`.
 10. Build the C\++ code with `make`.
 
-#Setup and Usage
+# Setup and Usage
 Before the framework can be used, some adjustments to the input paths of the individual files must be applied. 
 
 The framework takes the necessary information of the file locations from a config file. The config file can be found in the **Input** folder. In this folder all necessary input files should be placed. These files are: 
