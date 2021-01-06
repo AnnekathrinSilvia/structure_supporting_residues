@@ -15,7 +15,7 @@ Furthermore, the framework can only deal with a MSA of protein sequences in fast
 
 # Installation
 0. Install the necessary requirements.
-1. Clone the repository with `git clone --recursive https://wibi-git.helmholtz-hzi.de/asl20/structure_supporting_residues.git`.
+1. Clone the repository with `git clone --recursive https://github.com/AnnekathrinSilvia/structure_supporting_residues.git`.
 2. Change into the folder with the cloned repository (`cd structure_supporting_residues`).
 3. Change into the Pipeline folder (`cd Pipeline`).
 4. Clone the CCMPred suite with `git clone --recursive https://github.com/soedinglab/CCMpred.git`.
