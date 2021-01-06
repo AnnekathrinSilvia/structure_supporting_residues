@@ -1,0 +1,18 @@
+This is README file for calculating the scores mentioned in Protein Sequence Fitness Funtion
+
+For details about the scores please refer to
+
+Kaushik, R. and Zhang, K.Y. (2020). A Protein Sequence Fitness Funtion for Identifying Natural and Non-Natural Proteins
+
+1.  Copy the files from the repository and unzip
+2.  Provide execution permisions to main script. Run < chmod +x SEQUENCE_FITNESS.sh >
+3.  Prepare your input file as provided in TEST directory and shown in README
+4.  Run the main script as < ./SEQUENCE_FITNESS.sh DIRNEAME >
+5.  In the input directory name <DIRNAME.SQSS> and <DIRNAME.DAT> files are generated
+6.  In <DIRNAME.DAT>, the average CS-Score and percentage resisidues scoring below CS-Score threshold are given
+7.  In <DIRNAME.DAT>, the average CSS-Score and percentage resisidues scoring below CSS-Score threshold are given
+8.  The average values and correspondng standard deviation are provided.
+9.  If the avg. CS-Score >= 32.15, the input protein can be predicted as natural and vice-versa
+10. If the avg. CSS-Score >= 15.50, the input protein can be predicted as natural and vice-versa
+11. The values of percentage residues scoring below threshold in CS- and CSS-Scores can be used to estimete the number 
+    of natural or non-natural proteins close to these values by comparing it with  the values provided in ./data/LookUpTable

@@ -1,0 +1,8 @@
+MSA=../Input/MSA_file_name
+SUBSTITUTION_MATRIX=../Input/substitution_matrix_name
+PDB=../Input/PDB_file_name
+SEQUENCES=../Input/sequence_file_name
+HEADER=header
+STRICTLY_CONSERVED=threshold
+CONSERVED=threshold
+CORRELATED=threshold

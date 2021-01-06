@@ -1,0 +1,61 @@
+#This is the Snakefile to run the complete pipeline. 
+
+rule conservation_scores:
+	input: 
+			"../Input/ConfigFile.txt"
+	output:
+			"../Results/ConservationScores.txt"
+	shell:
+			"python executeScoring.py {input} {output}"
+
+			
+rule ccmpred:
+	input:
+			"../Input/ConfigFile.txt",
+			"../Results/ConservationScores.txt"
+	output:
+			"../Results/Contacts.txt"
+	
+	shell:
+			"python executeCCMpred.py {input} {output}"
+
+			
+rule mapping: 
+	input: 
+			"../Input/ConfigFile.txt",
+			"../Results/ConservationScores.txt",
+			"../Results/Contacts.txt"
+	output:
+			"../Results/Mapping.txt"
+	shell:
+			"python mapping.py {input} {output}"
+			
+	
+rule generateNewSequences:
+	input:
+			"../Input/ConfigFile.txt",
+			"../Results/ConservationScores.txt",
+			"../Results/Contacts.txt",
+			"../Results/Mapping.txt"
+	output:
+			"../Results/generatedSequences.txt"
+	shell:
+			"python generatingNewSequences.py {input} {output}"
+			
+rule comProDes:
+	input:
+			"../Input/ConfigFile.txt",
+			"../Results/generatedSequences.txt"
+	output:
+			"../Results/failedSequences.txt"
+	shell:
+			"python executeComProDes.py {input} {output}"
+			
+
+rule evaluateSequences:
+	input: 
+			"../Results/failedSequences.txt"
+	output: 
+			"../Results/evaluatedSequences.txt"
+	shell:
+			"python executeEvaluation.py {input} {output}"
